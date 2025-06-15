@@ -138,6 +138,6 @@ void loop() {
         grid[ptr++] = '\n';
     }
     grid[ptr] = '\0';
-    Serial.print(grid);
+    Serial.print(grid); 
 
 }
