@@ -1,2 +1,1 @@
-# Optimization of the FOMO model for microcontrollers ESP32-S3
- 
+Optimization of the NN-FOMO Model for Specific Embedded AI Applications
