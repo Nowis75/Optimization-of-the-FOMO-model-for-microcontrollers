@@ -1,25 +1,7 @@
 # Optimization of the NN-FOMO Model for Specific Embedded AI Applications
 
-Source code for paper which focusses on two variants of the NN-
-FOMO model designed for object detection on computationally
-limited devices, such as ESP32-S3. Instead of traditional bound-
-ing boxes, the NN FOMO model employs an output heatmap
-to detect object centroids, significantly reducing computational
-complexity. To achieve this, the baseline NN-FOMO architecture
-processes the RGB input through a convolutional structure and
-a resizing layer to produce a 16×16 resolution output. This is
-further upscaled in the optimized model that utilises greyscale
-input, efficient 2-stride convolutions for downsampling, and
-generates a 12×12 output heatmap without an interpolation layer.
-Both models were trained for specific use cases in TensorFlow
-/ Keras, quantized to INT8, and deployed on the ESP32-
-S3 microcontroller. Experimental results demonstrate that the
-optimized model significantly reduces memory and computation
-demands while maintaining detection accuracy comparable to
-the baseline model. The 12×12 output heatmaps enabled real-
-time detection of multiple objects and confirmed the suitability
-of this architecture for various edge AI applications. The study
-evaluated performance metrics including precision, recall, F1
-score, IoU, inference latency, and model size, demonstrating
-the advantages of the optimized approach for power-efficient
-hardware deployments.
+Source code for paper which focusses on two variants of the NN-FOMO model designed for object detection on computationally limited devices, such as ESP32-S3. Instead of traditional bounding boxes, the NN FOMO model employs an output heatmap to detect object centroids, significantly reducing computational complexity. To achieve this, the baseline NN-FOMO architecture processes the RGB input through a convolutional structure and a resizing layer to produce a 16×16 resolution output. This is further upscaled in the optimized model that utilises greyscale input, efficient 2-stride convolutions for downsampling, and generates a 12×12 output heatmap without an interpolation layer.
+
+Both models were trained for specific use cases in TensorFlow / Keras, quantized to INT8, and deployed on the ESP32-S3 microcontroller. Experimental results demonstrate that the optimized model significantly reduces memory and computation demands while maintaining detection accuracy comparable to the baseline model. The 12×12 output heatmaps enabled real-time detection of multiple objects and confirmed the suitability of this architecture for various edge AI applications, including smart, low-power consumer electronics such as home assistants, wearables, or toys, where embedded visual intelligence must operate under strict resource constraints.
+
+The study evaluated performance metrics including precision, recall, F1 score, IoU, inference latency, and model size, demonstrating the advantages of the optimized approach for power-efficient hardware deployments.
